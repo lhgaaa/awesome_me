@@ -2,10 +2,81 @@
 let mapleader=","
 " 语法高亮  
 syn on
-"配色方案  
+" 配色方案  
 colorscheme desert
-"解决vim大O卡顿
-set timeout timeoutlen=3000 ttimeoutlen=100
+
+" 括号内是vim插件安装路径，可以自定义
+call plug#begin()
+
+
+"""""""""""""""""""""""""""""Markdown"""""""""""""""""""""""""""
+" vim-markdown  markdown高亮插件
+Plug 'godlygeek/tabular'  " 必要插件，安装在vim-markdown前面
+Plug 'plasticboy/vim-markdown'
+
+" vim-markdown-toc 自动在当前光标生成目录
+Plug 'mzlogin/vim-markdown-toc'
+
+" markdown-preview.nvim  浏览器实时预览markdown文件
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" 补全插件coc.vim
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" 状态栏airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+call plug#end()
+
+
+" 解决vim大O卡顿
+" set timeout timeoutlen=3000 ttimeoutlen=100
+
+" markdown-preview插件:关闭打开markdown文件默认折叠
+let g:vim_markdown_folding_disabled=1
+
+
+""""""""""""""""""""""""""""""coc.vim配置""""""""""""""""""""""
+
+" 需要设置pyxversion变量，选择默认Python版本
+set pyxversion=3
+
+" always show signcolumns
+" set signcolumn=yes
+
+" if hidden is not set, TextEdit might fail.
+set hidden
+
+" Some servers have issues with backup files, see #649
+set nobackup
+set nowritebackup
+
+" Better display for messages
+set cmdheight=2
+
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+""""""""""""""""""""""""""""coco.vim配置结束"""""""""""""""""""""""
+
 
 " colorscheme torte  
 set pastetoggle=<F11>         " pastetoggle( 粘贴模式切换 ) 可以避免自动缩进   
