@@ -13,7 +13,9 @@ export ZSH="/Users/lhgaaa/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 
 # swtich zsh theme
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
 
 ## config powerlevel9k theme
  
