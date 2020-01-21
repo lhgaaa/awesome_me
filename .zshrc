@@ -4,7 +4,7 @@ export TERM="xterm-256color"
  
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/lhgaaa/.oh-my-zsh"
+export ZSH="/home/lhgaaa/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -99,7 +99,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs histor
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -124,20 +124,27 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
+#################################auto run tmux######################
+# If not running interactively, do not do anything
+[[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
 alias svim="sudo nvim"
+alias install='sudo apt install'
 alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
 alias sock5='ssh -D 7001 -fTNnC root@129.226.69.149'
 alias www='python -m SimpleHTTPServer 8000'
+alias ghub='cd ~/github'
 
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
-TLDR_PARAM='red'
+# TLDR_PARAM='red'
 PATH=$PATH:~/.local/bin
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

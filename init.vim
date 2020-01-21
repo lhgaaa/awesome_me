@@ -38,6 +38,7 @@ call plug#end()
 let g:vim_markdown_folding_disabled=1
 
 
+
 """"""""""""""""""""""""""""""coc.vim配置""""""""""""""""""""""
 
 " 需要设置pyxversion变量，选择默认Python版本
@@ -186,6 +187,8 @@ set foldmethod=manual
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <c-j> jjj
+nnoremap <c-k> kkk
 " 小写转换为大写
 inoremap <c-u> <ESC>viwgUea
 nnoremap <c-u> viwgUe
