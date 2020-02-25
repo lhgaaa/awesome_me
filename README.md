@@ -5,7 +5,7 @@
 
 ## 说明
 
-- 本配置仅在第一次从github上pull，第一次pull完成后需要再库目录运行`re_build.sh`脚本来构建远程库和本地配置文件的联系，以后每次配置改变只需要`add,commit,push`即可
+- 本配置仅在第一次从github上pull，第一次pull完成后需要在库目录运行`re_build.sh`脚本来构建远程库和本地配置文件的联系，以后每次配置改变只需要`add,commit,push`即可
 
 - autorun_ubuntu.conf
   新ubuntu开发环境搭建

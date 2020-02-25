@@ -7,4 +7,4 @@ function clone()
     done
 }
 
-clone learning leetcode learning-cpp learning-linux
+clone leetcode learning learning-cpp learning-linux awesome-tools awesome-me
