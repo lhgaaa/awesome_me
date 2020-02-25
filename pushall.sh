@@ -4,12 +4,12 @@ for i in $x; do
   echo $i;
   if [ -d "$i" ]; then 
     cd $i;
-    git add --all;
-    git commit -m "auto commit";
-    git push origin master;
+    if [ -e ".git" ]; then
+      git add --all;
+      git commit -m "auto commit";
+      git push origin master;
+      echo "$i push finished";
+    fi
     cd ..;
-    echo "$i push finished";
-  else
-    echo "$i is not a dir";
   fi
 done
