@@ -205,6 +205,7 @@ inoremap <c-n> <down>
 inoremap <c-p> <up>
 inoremap <c-e> <ESC>A
 inoremap <c-a> <ESC>I
+inoremap <c-d> <DEL>
 nnoremap <Space> zz
 
 " #main
