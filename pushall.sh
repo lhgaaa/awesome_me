@@ -7,6 +7,7 @@ for i in $x; do
     git add --all;
     git commit -m "auto commit";
     git push origin master;
+    cd ..;
     echo "$i push finished";
   else
     echo "$i is not a dir";
