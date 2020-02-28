@@ -6,8 +6,9 @@ for i in $x; do
   if [ -d "$i" ]; then 
     cd $i;
     if [ -e ".git" ]; then
+      date=`date`;
       git add --all;
-      git commit -m "auto commit";
+      git commit -m "auto commit:$date";
       git push origin master;
       echo "------$i push finished----";
 

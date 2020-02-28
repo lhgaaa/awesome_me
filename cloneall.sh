@@ -13,4 +13,4 @@ function clone()
     done
 }
 
-clone learning-cpp learning-linux awesome-me leetcode awesome-tools learning haigangx.github.io linux-server-dev awesome-SE learning-English exercise Lexi
+clone learning-cpp learning-linux awesome-me leetcode awesome-tools learning haigangx.github.io linux-server-dev awesome-SE learning-English exercise Lexi books
