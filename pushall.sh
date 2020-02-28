@@ -11,7 +11,6 @@ for i in $x; do
       git commit -m "auto commit:$date";
       git push origin master;
       echo "------$i push finished----";
-
     fi
     cd ..;
   fi
