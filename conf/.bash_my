@@ -1,0 +1,8 @@
+alias rr='ranger'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias vi='vim'
+alias cdwork='cd ~/workarea'
+alias cddown='cd ~/Downloads'
+alias cddoc='cd ~/Documents'
+alias cdgit='cd ~/github'
